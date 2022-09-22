@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+
+public class fibonacci {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n;
+        System.out.println("Ingresa el numero de iteraciones");
+        n=sc.nextInt(); //ingresa el numero de iteraciones
+        for (int i = 0; i < n; i++) { //va a repetir el for hasta que i sea igual al de las iteraciones
+            System.out.println(fibonacci(i)); //imprime los valores
+        }
+        
+        
+        
+    }
+    
+    public static int fibonacci(int n){ //ingresamos al metodo de fibonacci 
+        if (n<2) { //entra al if cuando n sea menor a 2
+            return n;    //regresa el valor de n
+        }
+        else{ //en caso de que no sea menor a 2
+            return fibonacci(n-1)+fibonacci(n-2); // regresa la suma de fibonacci en n restandole uno y dos.
+        }
+}
+}
+
